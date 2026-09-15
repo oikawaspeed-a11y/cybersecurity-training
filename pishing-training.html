@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Awareness Training</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .warning {
+      background: #fff3cd;
+      border: 1px solid #ffe69c;
+      color: #664d03;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .card {
+      background: white;
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+
+    .logo {
+      width: 55px;
+      height: 55px;
+      margin: 0 auto 20px;
+      background: #2563eb;
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #6b7280;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #374151;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 7px;
+      margin-bottom: 18px;
+      font-size: 15px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #2563eb;
+    }
+
+    button {
+      width: 100%;
+      padding: 13px;
+      background: #2563eb;
+      border: none;
+      color: white;
+      border-radius: 7px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    .result {
+      display: none;
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .result h2 {
+      color: #16a34a;
+      margin-bottom: 12px;
+    }
+
+    .result p {
+      color: #4b5563;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .tips {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f9fafb;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    .tips strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .tips li {
+      margin: 7px 0;
+      margin-left: 20px;
+      font-size: 13px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      color: #9ca3af;
+      font-size: 11px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="warning">
+      ⚠️ SIMULASI KESEDARAN KESELAMATAN SIBER
+    </div>
+
+    <div class="card">
+
+      <!-- LOGIN SIMULATION -->
+      <div id="loginSection">
+
+        <div class="logo">S</div>
+
+        <h1>Security Portal</h1>
+
+        <p class="subtitle">
+          Sila log masuk untuk meneruskan
+        </p>
+
+        <form id="trainingForm">
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="contoh@email.com"
+            autocomplete="off"
+            required
+          >
+
+          <label for="password">Kata Laluan</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Masukkan kata laluan"
+            autocomplete="off"
+            required
+          >
+
+          <button type="submit">
+            Log Masuk
+          </button>
+
+        </form>
+
+        <div class="footer">
+          Latihan cybersecurity — tiada data dihantar
+        </div>
+
+      </div>
+
+      <!-- TRAINING RESULT -->
+      <div id="resultSection" class="result">
+
+        <div class="icon">🛡️</div>
+
+        <h2>Anda Terperangkap Dalam Simulasi!</h2>
+
+        <p>
+          Ini hanyalah halaman latihan phishing.
+          Maklumat yang anda masukkan <strong>tidak disimpan
+          dan tidak dihantar ke mana-mana server.</strong>
+        </p>
+
+        <div class="tips">
+
+          <strong>🔎 Cara mengenali phishing:</strong>
+
+          <ul>
+            <li>Semak alamat URL sebelum log masuk.</li>
+            <li>Jangan masukkan password melalui link yang mencurigakan.</li>
+            <li>Berhati-hati dengan mesej yang mendesak anda bertindak segera.</li>
+            <li>Pastikan laman menggunakan domain rasmi organisasi.</li>
+            <li>Jangan benarkan akses kamera/mikrofon kepada laman yang tidak dipercayai.</li>
+          </ul>
+
+        </div>
+
+        <button
+          style="margin-top:20px;"
+          onclick="location.reload()">
+          Cuba Semula
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const form = document.getElementById("trainingForm");
+    const loginSection = document.getElementById("loginSection");
+    const resultSection = document.getElementById("resultSection");
+
+    form.addEventListener("submit", function(event) {
+
+      // Prevent data from being submitted anywhere.
+      event.preventDefault();
+
+      // The entered information is deliberately NOT read,
+      // stored, logged, or transmitted.
+
+      loginSection.style.display = "none";
+      resultSection.style.display = "block";
+
+    });
+  </script>
+
+</body>
+</html>
+```
